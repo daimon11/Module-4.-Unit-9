@@ -12,11 +12,9 @@ const cart = {
     };
     this.items.push(product);
     this.increaseCount();
-    this.calculateItemPrice();
+    this.count += quantityProduct;
   },
-  increaseCount(number = 0) {
-    this.items[cart.items.length - 1].quantityProduct += number;
-    this.count = this.items.reduce((acc, { quantityProduct }) => acc + quantityProduct, 0);
+  increaseCount() {
     return this.count;
   },
   calculateItemPrice() {
@@ -35,7 +33,6 @@ const cart = {
 }
 
 cart.add('Вино', 450);
-cart.increaseCount(5);
 cart.add('Пиво', 100, 5);
 cart.totalPrice = 100;
 cart.print();
