@@ -24451,5 +24451,5 @@ const listIPv4 = [
   "10.0.32.20"
 ];
 
-console.log(listIPv4.length);
-console.log(arrLenght(listIPv4));
+console.log('Общее количество ip-адресов: ' + listIPv4.length);
+console.log('Количество уникальных ip-адресов: ' + arrLenght(listIPv4));
